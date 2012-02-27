@@ -1,0 +1,15 @@
+backup files:
+  - "/etc/resolv.conf"
+backup script: backup_ifcfg.sh
+description:
+  - System cannot resolving hostnames
+details: There is no servers in /etc/resolv.conf. To fix it, resolve hostnames.
+os requirements:
+  - RHEL_5
+package requirements:
+  RHEL_5:
+    - sed
+    - initscripts
+system requirements:
+trouble script: dns-cannot_resolve.sh
+
